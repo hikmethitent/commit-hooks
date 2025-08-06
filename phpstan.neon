@@ -1,0 +1,9 @@
+parameters:
+    level: 8
+    paths:
+        - index.php
+        - src
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+    ignoreErrors:
+        # Burada belirli hataları yok sayabilirsiniz
