@@ -16,18 +16,12 @@ composer run hooks:install
 
 Bu komut, `.git/hooks/` klasöründe gerekli hook dosyalarını oluşturur.
 
-### 3. Hook'ları Aktifleştirin
-```bash
-composer run hooks:enable
-```
-
 ## CaptainHook Yapılandırması
 
 Proje, `captainhook.json` dosyası ile yapılandırılmıştır:
 
 ### Pre-Commit Hook'ları
 Her commit öncesi çalışır:
-- **PHP Syntax Kontrolü**: PSR-12 standartlarına uygunluk
 - **Pint Kod Formatı Kontrolü**: Laravel Pint ile kod formatting
 - **PHPStan Statik Analiz**: Tip kontrolü ve kod kalitesi analizi
 
@@ -64,20 +58,11 @@ git commit -m "refactor(database): veritabanı bağlantı sınıfı yeniden düz
 composer run phpstan
 ```
 
-### Pint ile Kod Formatlama
-```bash
-# Kodları formatla
-composer run pint
-
-# Sadece kontrol et (değişiklik yapma)
-composer run pint-check
-```
-
 ## Hook'ları Geçici Olarak Devre Dışı Bırakma
 
 ### Tüm Hook'ları Devre Dışı Bırak
 ```bash
-composer run hooks:disable
+composer run hooks:disable hook_name
 ```
 
 ### Sadece Bir Commit İçin Atla
@@ -87,7 +72,7 @@ git commit -m "mesaj" --no-verify
 
 ## Hook'ları Tekrar Aktifleştirme
 ```bash
-composer run hooks:enable
+composer run hooks:enable hook_name
 ```
 
 ## Özelleştirme
