@@ -19,34 +19,16 @@
         "enabled": true,
         "actions": [
             {
-                "action": "\\CaptainHook\\App\\Hook\\PHP\\Action\\Linting",
+                "action": "composer phpstan",
                 "options": {
-                    "standard": "PSR12"
-                }
-            },
-            {
-                "action": "shell",
-                "options": {
-                    "exec": "composer pint-check",
                     "fail-on-non-zero": true
                 },
                 "conditions": [
                     {
                         "exec": "\\CaptainHook\\App\\Hook\\Condition\\FileStaged\\OfType",
-                        "args": ["php"]
-                    }
-                ]
-            },
-            {
-                "action": "shell",
-                "options": {
-                    "exec": "composer phpstan",
-                    "fail-on-non-zero": true
-                },
-                "conditions": [
-                    {
-                        "exec": "\\CaptainHook\\App\\Hook\\Condition\\FileStaged\\OfType",
-                        "args": ["php"]
+                        "args": [
+                            "php"
+                        ]
                     }
                 ]
             }

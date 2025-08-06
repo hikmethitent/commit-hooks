@@ -6,6 +6,22 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'PharIo\\ComposerDistributor\\' => array($vendorDir . '/phar-io/composer-distributor/src'),
-    'CaptainHook\\Composer\\' => array($vendorDir . '/captainhook/captainhook-phar/src'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Symfony\\Polyfill\\Intl\\Normalizer\\' => array($vendorDir . '/symfony/polyfill-intl-normalizer'),
+    'Symfony\\Polyfill\\Intl\\Grapheme\\' => array($vendorDir . '/symfony/polyfill-intl-grapheme'),
+    'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
+    'Symfony\\Contracts\\Service\\' => array($vendorDir . '/symfony/service-contracts'),
+    'Symfony\\Component\\String\\' => array($vendorDir . '/symfony/string'),
+    'Symfony\\Component\\Process\\' => array($vendorDir . '/symfony/process'),
+    'Symfony\\Component\\Filesystem\\' => array($vendorDir . '/symfony/filesystem'),
+    'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
+    'SebastianFeldmann\\Git\\' => array($vendorDir . '/sebastianfeldmann/git/src'),
+    'SebastianFeldmann\\Cli\\' => array($vendorDir . '/sebastianfeldmann/cli/src'),
+    'SebastianFeldmann\\Camino\\' => array($vendorDir . '/sebastianfeldmann/camino/src'),
+    'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
+    'Database\\Seeders\\' => array($vendorDir . '/laravel/pint/database/seeders'),
+    'Database\\Factories\\' => array($vendorDir . '/laravel/pint/database/factories'),
+    'CaptainHook\\Secrets\\' => array($vendorDir . '/captainhook/secrets/src'),
+    'CaptainHook\\App\\' => array($vendorDir . '/captainhook/captainhook/src'),
+    'App\\' => array($baseDir . '/src', $vendorDir . '/laravel/pint/app'),
 );

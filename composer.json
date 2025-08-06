@@ -7,8 +7,8 @@
     },
     "require-dev": {
         "captainhook/captainhook": "^5.22",
-        "phpstan/phpstan": "^1.10",
-        "laravel/pint": "^1.13"
+        "laravel/pint": "^1.13",
+        "phpstan/phpstan": "^2.1"
     },
     "autoload": {
         "psr-4": {
@@ -16,9 +16,7 @@
         }
     },
     "scripts": {
-        "phpstan": "phpstan analyse",
-        "pint": "pint",
-        "pint-check": "pint --test",
+        "phpstan": "vendor/bin/phpstan analyse",
         "hooks:install": "php vendor/bin/captainhook install",
         "hooks:enable": "php vendor/bin/captainhook enable",
         "hooks:disable": "php vendor/bin/captainhook disable"
